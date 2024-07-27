@@ -24,6 +24,10 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     exit
 }
 
+# Add required assemblies
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
+
 # Define a variable to store the path to the current script's directory
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 Write-Host "Script path: $scriptPath"
@@ -196,10 +200,25 @@ function Set-UACNoNotification {
     }
 }
 
-# Create a form that allows the user to select what software to install and what tweaks to run and then execute them all at once
-Add-Type -AssemblyName System.Windows.Forms
-Add-Type -AssemblyName System.Drawing
+# Function that activates the Windows 10 Ultimate Performance Power Plan
+function Set-UltPerformancePlan {
+    try {
+        # Checks if the ultimate performance power plan already existed
+        $powerPlanExists = powercfg -list | Select-String -Pattern "Ultimate Performance" -Quiet
+        if ($powerPlanExists) {
+            Write-Host "Ultimate Performance Power Plan already exists." -ForegroundColor Yellow
+            return
+        }
+        Write-Host "Setting Ultimate Performance Power Plan..." -ForegroundColor Yellow
+        powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+        powercfg -setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+        Write-Host "Ultimate Performance Power Plan has been set successfully" -ForegroundColor Green
+    } catch {
+        Write-Host "Failed to set Ultimate Performance Power Plan." -ForegroundColor Red
+    }
+}
 
+# Create a form that allows the user to select what software to install and what tweaks to run and then execute them all at once
 Write-Host "Creating form..." -ForegroundColor Yellow
 
 $form = New-Object Windows.Forms.Form
@@ -348,6 +367,15 @@ $buttonExecutionPolicy.Add_Click({
     }
 })
 
+$buttonUltimatePerformancePlan = New-Object Windows.Forms.Button
+$buttonUltimatePerformancePlan.Text = "Enables Ultimate Performance"
+$buttonUltimatePerformancePlan.Location = New-Object Drawing.Point(300,230)
+$buttonUltimatePerformancePlan.AutoSize = $true
+$form.Controls.Add($buttonUltimatePerformancePlan)
+$buttonUltimatePerformancePlan.Add_Click({
+    Set-UltPerformancePlan
+})
+
 $buttonAbout = New-Object Windows.Forms.Button
 $buttonAbout.Text = "About"
 $buttonAbout.Location = New-Object Drawing.Point(145,300)
@@ -380,11 +408,21 @@ $buttonRunAll.Add_Click({
 
 # Create OK button
 $buttonOK = New-Object Windows.Forms.Button
-$buttonOK.Text = "OK"
+$buttonOK.Text = "Close"
 $buttonOK.Location = New-Object Drawing.Point(300,300)
 $form.Controls.Add($buttonOK)
 $buttonOK.Add_Click({
-    $form.Close()
+    # Add confirmation box to close the form
+    $result = [System.Windows.Forms.MessageBox]::Show("Are you sure you want to close the form?", "Close Form", [System.Windows.Forms.MessageBoxButtons]::YesNo, [System.Windows.Forms.MessageBoxIcon]::Question)
+    if ($result -eq "Yes") {
+        # Suggest wallpapers
+        Write-Host "Suggesting wallpapers..." -ForegroundColor Yellow
+        Start-Process https://ibb.co/yFzF6hC
+        Start-Process https://imgbb.com/r3SRgDT
+        # Close the form
+        Write-Host "Closing form..." -ForegroundColor Yellow
+        $form.Close()
+    }    
 })
 
 Write-Host "Opening form..." -ForegroundColor Yellow
