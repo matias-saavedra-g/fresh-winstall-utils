@@ -11,6 +11,9 @@ This PowerShell script provides a graphical user interface (GUI) for performing 
 - **Run Microsoft Activation Scripts**: Runs Microsoft Activation Scripts to activate Windows.
 - **Apply Essential Tweaks**: Applies essential system tweaks for better performance.
 - **Set Folder Options**: Sets preferred folder options in Windows Explorer.
+- **Enables Ultimate Performance Power Plan**: Creates the Ultimate Performance Power Plan from Windows.
+- **Install Drivers**: Install every driver of a machine using [DriverPack](https://github.com/DriverPackSolution/DriverPack-Solution).
+- **Recommend Wallpapers**: Recommend [day](https://www.reddit.com/r/windows/comments/lw4mst/i_remade_windows_xps_bliss_wallpaper_in/) and [night](https://www.reddit.com/r/windows/comments/lwrwgh/as_promised_night_version_of_my_windows_xp_bliss/?utm_source=share&utm_medium=web2x&context=3) Wallpapers when closing via the button.
 
 ## Prerequisites
 
@@ -31,15 +34,3 @@ This PowerShell script provides a graphical user interface (GUI) for performing 
     ```
 
 3. **Interact with the GUI**: Use the buttons in the GUI to perform the desired tasks.
-
-## Tooltips
-
-Each button in the GUI has a tooltip that explains its function when hovered over.
-
-- **Run CTT Win Utils Script**: Runs the Chris Titus Tech Windows Utilities script.
-- **Disable All Startup Programs**: Disables all startup programs to improve boot time.
-- **Install Chocolatey**: Installs Chocolatey, a package manager for Windows.
-- **Install Chocolatey Package**: Installs a specified Chocolatey package.
-- **Run Microsoft Activation Scripts**: Runs Microsoft Activation Scripts to activate Windows.
-- **Apply Essential Tweaks**: Applies essential system tweaks for better performance.
-- **Set Folder Options**: Sets preferred folder options in Windows Explorer.
