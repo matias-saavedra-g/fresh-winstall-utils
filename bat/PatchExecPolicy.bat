@@ -20,14 +20,6 @@ if %errorLevel% == 0 (
 
 echo Setting PowerShell execution policy to RemoteSigned...
 
-:: Check if the script is running as administrator
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-    echo This script requires administrative privileges.
-    pause
-    exit /b
-)
-
 :: Set the execution policy
 powershell -Command "Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force"
 
