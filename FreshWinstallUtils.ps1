@@ -376,6 +376,15 @@ $buttonUltimatePerformancePlan.Add_Click({
     Set-UltPerformancePlan
 })
 
+$buttonInstallDrivers = New-Object Windows.Forms.Button
+$buttonInstallDrivers.Text = "Install Drivers"
+$buttonInstallDrivers.Location = New-Object Drawing.Point(300,260)
+$buttonInstallDrivers.AutoSize = $true
+$form.Controls.Add($buttonInstallDrivers)
+$buttonInstallDrivers.Add_Click({
+    Start-Process "https://driverpack.io/"
+})
+
 $buttonAbout = New-Object Windows.Forms.Button
 $buttonAbout.Text = "About"
 $buttonAbout.Location = New-Object Drawing.Point(145,300)
@@ -417,6 +426,7 @@ $buttonOK.Add_Click({
     if ($result -eq "Yes") {
         # Suggest wallpapers
         Write-Host "Suggesting wallpapers..." -ForegroundColor Yellow
+
         Start-Process https://ibb.co/yFzF6hC
         Start-Process https://imgbb.com/r3SRgDT
         # Close the form
