@@ -223,7 +223,7 @@ Write-Host "Creating form..." -ForegroundColor Yellow
 
 $form = New-Object Windows.Forms.Form
 $form.Text = "Fresh Windows Install Utilities"
-$form.Size = New-Object Drawing.Size(550,400)
+$form.Size = New-Object Drawing.Size(550,500)
 $form.StartPosition = "CenterScreen"
 
 # Create checkboxes that install software and run tweaks
@@ -385,9 +385,24 @@ $buttonInstallDrivers.Add_Click({
     Start-Process "https://driverpack.io/"
 })
 
+$buttonWin11ContextMenu = New-Object Windows.Forms.Button
+$buttonWin11ContextMenu.Text = "Restore Context Menu Windows 11"
+$buttonWin11ContextMenu.Location = New-Object Drawing.Point(300,290)
+$buttonWin11ContextMenu.AutoSize = $true
+$form.Controls.Add($buttonWin11ContextMenu)
+$buttonWin11ContextMenu.Add_Click({
+    try {
+        # Run the batch file with the correct working directory
+        Start-Process -FilePath "$scriptPath\bat\Win11ContextMenu.bat"
+
+    } catch {
+        Write-Host "Failed to restore context menu in Windows 11." -ForegroundColor Red
+    }
+})
+
 $buttonAbout = New-Object Windows.Forms.Button
 $buttonAbout.Text = "About"
-$buttonAbout.Location = New-Object Drawing.Point(145,300)
+$buttonAbout.Location = New-Object Drawing.Point(145,400)
 $buttonAbout.AutoSize = $true
 $form.Controls.Add($buttonAbout)
 $buttonAbout.Add_Click({
@@ -397,7 +412,7 @@ $buttonAbout.Add_Click({
 # Create Run All Checked button that installs software and runs tweaks
 $buttonRunAll = New-Object Windows.Forms.Button
 $buttonRunAll.Text = "Run All Checked"
-$buttonRunAll.Location = New-Object Drawing.Point(10,300)
+$buttonRunAll.Location = New-Object Drawing.Point(10,400)
 $buttonRunAll.AutoSize = $true
 $form.Controls.Add($buttonRunAll)
 $buttonRunAll.Add_Click({
@@ -418,7 +433,7 @@ $buttonRunAll.Add_Click({
 # Create OK button
 $buttonOK = New-Object Windows.Forms.Button
 $buttonOK.Text = "Close"
-$buttonOK.Location = New-Object Drawing.Point(300,300)
+$buttonOK.Location = New-Object Drawing.Point(300,400)
 $form.Controls.Add($buttonOK)
 $buttonOK.Add_Click({
     # Add confirmation box to close the form
