@@ -52,6 +52,7 @@ function Disable-AllStartupPrograms {
     }
 }
 
+# I started using Winget to install software instead of Chocolatey, but you can use Chocolatey if you prefer
 # Function to install Chocolatey if not already installed
 function Install-Choco {
     try{
@@ -63,7 +64,7 @@ function Install-Choco {
     }
 }
 
-# Function to install a Chocolatey package if it is not already installed
+# Function to install a Chocolatey package if it is not already installed, or upgrade it if it was already installed
 function Install-ChocolateyPackage {
     [CmdletBinding()]
     param (
@@ -223,8 +224,29 @@ Write-Host "Creating form..." -ForegroundColor Yellow
 
 $form = New-Object Windows.Forms.Form
 $form.Text = "Fresh Windows Install Utilities"
-$form.Size = New-Object Drawing.Size(550,500)
+$form.Size = New-Object Drawing.Size(850,800)
 $form.StartPosition = "CenterScreen"
+
+# Changes the icon of the forms
+$form.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon("$scriptPath\icons\MT.ico")
+
+# Makes the background color of the form Monaco Blue #264375
+$form.BackColor = "#264375"
+
+# Makes the default font of the form Arial, 9pt, and Color White
+$form.Font = New-Object Drawing.Font("Arial", 9, [Drawing.FontStyle]::Regular)
+$form.ForeColor = [Drawing.Color]::White
+
+# Makes the default background color of every button in the form Dark Blue #1A2E4F
+$form.DefaultBackColor = "#1A2E4F"
+
+# Creates a title for the checkboxes
+$labelTitle = New-Object Windows.Forms.Label
+$labelTitle.Font = New-Object Drawing.Font("Arial", 10, [Drawing.FontStyle]::Bold)
+$labelTitle.Text = "Select what software to install and what tweaks to run"
+$labelTitle.AutoSize = $true
+$labelTitle.Location = New-Object Drawing.Point(10,10)
+$form.Controls.Add($labelTitle)
 
 # Create checkboxes that install software and run tweaks
 $checkboxes = @{}
@@ -232,61 +254,75 @@ $checkboxes = @{}
 $checkboxes['AdobeAcrobat'] = New-Object Windows.Forms.CheckBox
 $checkboxes['AdobeAcrobat'].Text = "Installs Adobe Acrobat Reader PDF"
 $checkboxes['AdobeAcrobat'].AutoSize = $true
-$checkboxes['AdobeAcrobat'].Location = New-Object Drawing.Point(10,20)
+$checkboxes['AdobeAcrobat'].Location = New-Object Drawing.Point(10,50)
 $form.Controls.Add($checkboxes['AdobeAcrobat'])
 
 $checkboxes['7zip'] = New-Object Windows.Forms.CheckBox
-$checkboxes['7zip'].Text = "Installs 7zip"
+$checkboxes['7zip'].Text = "Installs 7-Zip"
 $checkboxes['7zip'].AutoSize = $true
-$checkboxes['7zip'].Location = New-Object Drawing.Point(10,50)
+$checkboxes['7zip'].Location = New-Object Drawing.Point(10,80)
 $form.Controls.Add($checkboxes['7zip'])
 
 $checkboxes['Office'] = New-Object Windows.Forms.CheckBox
-$checkboxes['Office'].Text = "Installs Office 2019 Pro Plus"
+$checkboxes['Office'].Text = "Installs Office 2021 Standard"
 $checkboxes['Office'].AutoSize = $true
-$checkboxes['Office'].Location = New-Object Drawing.Point(10,80)
+$checkboxes['Office'].Location = New-Object Drawing.Point(10,110)
 $form.Controls.Add($checkboxes['Office'])
 
 $checkboxes['MPC'] = New-Object Windows.Forms.CheckBox
 $checkboxes['MPC'].Text = "Installs MPC-HC"
 $checkboxes['MPC'].AutoSize = $true
-$checkboxes['MPC'].Location = New-Object Drawing.Point(10,110)
+$checkboxes['MPC'].Location = New-Object Drawing.Point(10,140)
 $form.Controls.Add($checkboxes['MPC'])
+
+$checkboxes['WinGetUI'] = New-Object Windows.Forms.CheckBox
+$checkboxes['WinGetUI'].Text = "Installs WinGet UI"
+$checkboxes['WinGetUI'].AutoSize = $true
+$checkboxes['WinGetUI'].Location = New-Object Drawing.Point(10,170)
+$form.Controls.Add($checkboxes['WinGetUI'])
 
 $checkboxes['DisableStartupPrograms'] = New-Object Windows.Forms.CheckBox
 $checkboxes['DisableStartupPrograms'].Text = "Disable all startup programs"
 $checkboxes['DisableStartupPrograms'].AutoSize = $true
-$checkboxes['DisableStartupPrograms'].Location = New-Object Drawing.Point(10,140)
+$checkboxes['DisableStartupPrograms'].Location = New-Object Drawing.Point(10,200)
 $form.Controls.Add($checkboxes['DisableStartupPrograms'])
 
 $checkboxes['TaskbarOptions'] = New-Object Windows.Forms.CheckBox
 $checkboxes['TaskbarOptions'].Text = "Adjust taskbar settings"
 $checkboxes['TaskbarOptions'].AutoSize = $true
-$checkboxes['TaskbarOptions'].Location = New-Object Drawing.Point(10,170)
+$checkboxes['TaskbarOptions'].Location = New-Object Drawing.Point(10,230)
 $form.Controls.Add($checkboxes['TaskbarOptions'])
 
 $checkboxes['FolderOptions'] = New-Object Windows.Forms.CheckBox
 $checkboxes['FolderOptions'].Text = "Set folder options"
 $checkboxes['FolderOptions'].AutoSize = $true
-$checkboxes['FolderOptions'].Location = New-Object Drawing.Point(10,200)
+$checkboxes['FolderOptions'].Location = New-Object Drawing.Point(10,260)
 $form.Controls.Add($checkboxes['FolderOptions'])
 
 $checkboxes['EssentialTweaks'] = New-Object Windows.Forms.CheckBox
 $checkboxes['EssentialTweaks'].Text = "Apply essential tweaks"
 $checkboxes['EssentialTweaks'].AutoSize = $true
-$checkboxes['EssentialTweaks'].Location = New-Object Drawing.Point(10,230)
+$checkboxes['EssentialTweaks'].Location = New-Object Drawing.Point(10,290)
 $form.Controls.Add($checkboxes['EssentialTweaks'])
 
 $checkboxes['UACNoNotification'] = New-Object Windows.Forms.CheckBox
 $checkboxes['UACNoNotification'].Text = "Set UAC to never notify"
 $checkboxes['UACNoNotification'].AutoSize = $true
-$checkboxes['UACNoNotification'].Location = New-Object Drawing.Point(10,260)
+$checkboxes['UACNoNotification'].Location = New-Object Drawing.Point(10,320)
 $form.Controls.Add($checkboxes['UACNoNotification'])
+
+# Creates a title for the buttons
+$labelTitle = New-Object Windows.Forms.Label
+$labelTitle.Font = New-Object Drawing.Font("Arial", 10, [Drawing.FontStyle]::Bold)
+$labelTitle.Text = "One-Click additional utilities"
+$labelTitle.AutoSize = $true
+$labelTitle.Location = New-Object Drawing.Point(600,10)
+$form.Controls.Add($labelTitle)
 
 # Create buttons
 $buttonSoftware = New-Object Windows.Forms.Button
-$buttonSoftware.Text = "Commonly used software"
-$buttonSoftware.Location = New-Object Drawing.Point(300,20)
+$buttonSoftware.Text = "Check commonly used software"
+$buttonSoftware.Location = New-Object Drawing.Point(600,50)
 $buttonSoftware.AutoSize = $true
 $form.Controls.Add($buttonSoftware)
 $buttonSoftware.Add_Click({
@@ -297,8 +333,8 @@ $buttonSoftware.Add_Click({
 })
 
 $buttonTweaks = New-Object Windows.Forms.Button
-$buttonTweaks.Text = "Commonly useful tweaks"
-$buttonTweaks.Location = New-Object Drawing.Point(300,50)
+$buttonTweaks.Text = "Check commonly useful tweaks"
+$buttonTweaks.Location = New-Object Drawing.Point(600,80)
 $buttonTweaks.AutoSize = $true
 $form.Controls.Add($buttonTweaks)
 $buttonTweaks.Add_Click({
@@ -310,18 +346,32 @@ $buttonTweaks.Add_Click({
 })
 
 # Create additional buttons
-$buttonInstallChoco = New-Object Windows.Forms.Button
-$buttonInstallChoco.Text = "Install Choco Installer"
-$buttonInstallChoco.Location = New-Object Drawing.Point(300,80)
-$buttonInstallChoco.AutoSize = $true
-$form.Controls.Add($buttonInstallChoco)
-$buttonInstallChoco.Add_Click({
-    Install-Choco
+$buttonInstallWinget = New-Object Windows.Forms.Button
+$buttonInstallWinget.Text = "Install Winget"
+$buttonInstallWinget.Location = New-Object Drawing.Point(600,110)
+$buttonInstallWinget.AutoSize = $true
+$form.Controls.Add($buttonInstallWinget)
+$buttonInstallWinget.Add_Click({
+    # get latest download url
+    $URL = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
+    $URL = (Invoke-WebRequest -Uri $URL).Content | ConvertFrom-Json |
+            Select-Object -ExpandProperty "assets" |
+            Where-Object "browser_download_url" -Match '.msixbundle' |
+            Select-Object -ExpandProperty "browser_download_url"
+
+    # download
+    Invoke-WebRequest -Uri $URL -OutFile "Setup.msix" -UseBasicParsing
+
+    # install
+    Add-AppxPackage -Path "Setup.msix"
+
+    # delete file
+    Remove-Item "Setup.msix"
 })
 
 $buttonExecuteScript1 = New-Object Windows.Forms.Button
 $buttonExecuteScript1.Text = "Execute Microsoft Activation Scripts"
-$buttonExecuteScript1.Location = New-Object Drawing.Point(300,110)
+$buttonExecuteScript1.Location = New-Object Drawing.Point(600,140)
 $buttonExecuteScript1.AutoSize = $true
 $form.Controls.Add($buttonExecuteScript1)
 $buttonExecuteScript1.Add_Click({
@@ -330,7 +380,7 @@ $buttonExecuteScript1.Add_Click({
 
 $buttonExecuteScript2 = New-Object Windows.Forms.Button
 $buttonExecuteScript2.Text = "Execute CTT Win Utils"
-$buttonExecuteScript2.Location = New-Object Drawing.Point(300,140)
+$buttonExecuteScript2.Location = New-Object Drawing.Point(600,170)
 $buttonExecuteScript2.AutoSize = $true
 $form.Controls.Add($buttonExecuteScript2)
 $buttonExecuteScript2.Add_Click({
@@ -339,7 +389,7 @@ $buttonExecuteScript2.Add_Click({
 
 $buttonHighPerformancePlan = New-Object Windows.Forms.Button
 $buttonHighPerformancePlan.Text = "Set High Performance Plan"
-$buttonHighPerformancePlan.Location = New-Object Drawing.Point(300,170)
+$buttonHighPerformancePlan.Location = New-Object Drawing.Point(600,200)
 $buttonHighPerformancePlan.AutoSize = $true
 $form.Controls.Add($buttonHighPerformancePlan)
 $buttonHighPerformancePlan.Add_Click({
@@ -355,7 +405,7 @@ $buttonHighPerformancePlan.Add_Click({
 
 $buttonExecutionPolicy = New-Object Windows.Forms.Button
 $buttonExecutionPolicy.Text = "Patch Execution Policy"
-$buttonExecutionPolicy.Location = New-Object Drawing.Point(300,200)
+$buttonExecutionPolicy.Location = New-Object Drawing.Point(600,230)
 $buttonExecutionPolicy.AutoSize = $true
 $form.Controls.Add($buttonExecutionPolicy)
 $buttonExecutionPolicy.Add_Click({
@@ -369,7 +419,7 @@ $buttonExecutionPolicy.Add_Click({
 
 $buttonUltimatePerformancePlan = New-Object Windows.Forms.Button
 $buttonUltimatePerformancePlan.Text = "Enables Ultimate Performance"
-$buttonUltimatePerformancePlan.Location = New-Object Drawing.Point(300,230)
+$buttonUltimatePerformancePlan.Location = New-Object Drawing.Point(600,260)
 $buttonUltimatePerformancePlan.AutoSize = $true
 $form.Controls.Add($buttonUltimatePerformancePlan)
 $buttonUltimatePerformancePlan.Add_Click({
@@ -378,7 +428,7 @@ $buttonUltimatePerformancePlan.Add_Click({
 
 $buttonInstallDrivers = New-Object Windows.Forms.Button
 $buttonInstallDrivers.Text = "Install Drivers"
-$buttonInstallDrivers.Location = New-Object Drawing.Point(300,260)
+$buttonInstallDrivers.Location = New-Object Drawing.Point(600,290)
 $buttonInstallDrivers.AutoSize = $true
 $form.Controls.Add($buttonInstallDrivers)
 $buttonInstallDrivers.Add_Click({
@@ -387,7 +437,7 @@ $buttonInstallDrivers.Add_Click({
 
 $buttonWin11ContextMenu = New-Object Windows.Forms.Button
 $buttonWin11ContextMenu.Text = "Restore Context Menu Windows 11"
-$buttonWin11ContextMenu.Location = New-Object Drawing.Point(300,290)
+$buttonWin11ContextMenu.Location = New-Object Drawing.Point(600,320)
 $buttonWin11ContextMenu.AutoSize = $true
 $form.Controls.Add($buttonWin11ContextMenu)
 $buttonWin11ContextMenu.Add_Click({
@@ -402,25 +452,100 @@ $buttonWin11ContextMenu.Add_Click({
 
 $buttonAbout = New-Object Windows.Forms.Button
 $buttonAbout.Text = "About"
-$buttonAbout.Location = New-Object Drawing.Point(145,400)
+$buttonAbout.Location = New-Object Drawing.Point(145,700)
 $buttonAbout.AutoSize = $true
 $form.Controls.Add($buttonAbout)
 $buttonAbout.Add_Click({
     Start-Process "https://sites.google.com/view/mt-homepage"
 })
+# Adds the icon to the button.
+# Load the original image
+$originalImage = [System.Drawing.Image]::FromFile("$scriptPath\icons\MT.ico")
+# Create a new bitmap with the desired size
+$resizedImage = New-Object System.Drawing.Bitmap 13, 13
+# Create a graphics object to perform the resizing
+$graphics = [System.Drawing.Graphics]::FromImage($resizedImage)
+# Set the interpolation mode to high quality
+$graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+# Draw the original image onto the resized bitmap
+$graphics.DrawImage($originalImage, 0, 0, 13, 13)
+# Dispose of the graphics object
+$graphics.Dispose()
+# Assign the resized image to the button
+$buttonAbout.Image = $resizedImage
+$buttonAbout.TextAlign = [System.Drawing.ContentAlignment]::MiddleLeft
+$buttonAbout.ImageAlign = [System.Drawing.ContentAlignment]::MiddleRight
+
+$buttonWallpapers = New-Object Windows.Forms.Button
+$buttonWallpapers.Text = "Wallpapers"
+$buttonWallpapers.Location = New-Object Drawing.Point(280,700)
+$buttonWallpapers.AutoSize = $true
+$form.Controls.Add($buttonWallpapers)
+$buttonWallpapers.Add_Click({
+    # Suggest wallpapers
+    Write-Host "Suggesting wallpapers..." -ForegroundColor Yellow
+
+    Start-Process https://ibb.co/yFzF6hC
+    Start-Process https://imgbb.com/r3SRgDT
+})
 
 # Create Run All Checked button that installs software and runs tweaks
 $buttonRunAll = New-Object Windows.Forms.Button
 $buttonRunAll.Text = "Run All Checked"
-$buttonRunAll.Location = New-Object Drawing.Point(10,400)
+$buttonRunAll.Location = New-Object Drawing.Point(10,700)
 $buttonRunAll.AutoSize = $true
 $form.Controls.Add($buttonRunAll)
 $buttonRunAll.Add_Click({
     # Install software
-    if ($checkboxes['AdobeAcrobat'].Checked) { Install-ChocolateyPackage "adobereader" }
-    if ($checkboxes['7zip'].Checked) { Install-ChocolateyPackage "7zip.install" }
-    if ($checkboxes['Office'].Checked) { Install-ChocolateyPackage "office2019proplus" }
-    if ($checkboxes['MPC'].Checked) { Install-ChocolateyPackage "mpc-hc" }
+    if ($checkboxes['AdobeAcrobat'].Checked) { winget install -e --id Adobe.Acrobat.Reader.32-bit }
+    if ($checkboxes['7zip'].Checked) { winget install -e --id 7zip.7zip }
+    if ($checkboxes['Office'].Checked) {
+# Define the installation directory and configuration file
+$installDir = "C:\Install\Office"
+$configFile = "C:\Install\Office\configuration.xml"
+
+# Create the installation directory
+New-Item -ItemType Directory -Path $installDir -Force
+
+# Download the Office Deployment Tool (ODT)
+$odtUrl = "https://aka.ms/OfficeDeploymentTool"
+Invoke-WebRequest -Uri $odtUrl -OutFile "$installDir\ODT.exe"
+
+# Run the ODT to extract files
+Start-Process -FilePath "$installDir\ODT.exe" -ArgumentList "/extract:$installDir" -Wait
+
+# Create the configuration.xml file
+$configXml = @"
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2021" SourcePath="$installDir">
+    <Product ID="Standard2021Volume" PIDKEY="YOUR-MAK-KEY-HERE">
+      <Language ID="MatchOS" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="Teams" />
+    </Product>
+  </Add>
+  <Property Name="AUTOACTIVATE" Value="1" />
+  <Updates Enabled="TRUE" />
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>
+"@
+
+# Save the configuration file
+$configXml | Set-Content -Path $configFile
+
+# Download Office installation files
+Start-Process -FilePath "$installDir\setup.exe" -ArgumentList "/download $configFile" -Wait
+
+# Install Office
+Start-Process -FilePath "$installDir\setup.exe" -ArgumentList "/configure $configFile" -Wait
+
+Write-Host "Office Standard 2021 installation completed." -ForegroundColor Green
+
+# Clean the installation files and configuration files
+Remove-Item -Path $installDir -Recurse -Force
+    }
+    if ($checkboxes['MPC'].Checked) { winget install -e --id clsid2.mpc-hc }
+    if ($checkboxes['WinGetUI'].Checked) { winget install -e --id SomePythonThings.WingetUIStore }
 
     # Run tweaks
     if ($checkboxes['DisableStartupPrograms'].Checked) { Disable-AllStartupPrograms }
@@ -433,17 +558,12 @@ $buttonRunAll.Add_Click({
 # Create OK button
 $buttonOK = New-Object Windows.Forms.Button
 $buttonOK.Text = "Close"
-$buttonOK.Location = New-Object Drawing.Point(300,400)
+$buttonOK.Location = New-Object Drawing.Point(600,700)
 $form.Controls.Add($buttonOK)
 $buttonOK.Add_Click({
     # Add confirmation box to close the form
     $result = [System.Windows.Forms.MessageBox]::Show("Are you sure you want to close the form?", "Close Form", [System.Windows.Forms.MessageBoxButtons]::YesNo, [System.Windows.Forms.MessageBoxIcon]::Question)
     if ($result -eq "Yes") {
-        # Suggest wallpapers
-        Write-Host "Suggesting wallpapers..." -ForegroundColor Yellow
-
-        Start-Process https://ibb.co/yFzF6hC
-        Start-Process https://imgbb.com/r3SRgDT
         # Close the form
         Write-Host "Closing form..." -ForegroundColor Yellow
         $form.Close()
