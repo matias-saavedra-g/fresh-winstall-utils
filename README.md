@@ -6,8 +6,7 @@ This PowerShell script provides a graphical user interface (GUI) for performing 
 
 - **Run CTT Win Utils Script**: Executes the Chris Titus Tech Windows Utilities script.
 - **Disable All Startup Programs**: Disables all startup programs to improve boot time.
-- **Install Chocolatey**: Installs Chocolatey, a package manager for Windows.
-- **Install Chocolatey Package**: Installs a specified Chocolatey package.
+- **Install using Winget**: Install packages using built-in Windows feature Winget.
 - **Run Microsoft Activation Scripts**: Runs Microsoft Activation Scripts to activate Windows.
 - **Apply Essential Tweaks**: Applies essential system tweaks for better performance.
 - **Set Folder Options**: Sets preferred folder options in Windows Explorer.
