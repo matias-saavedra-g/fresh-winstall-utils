@@ -12,7 +12,7 @@ When this autounattend.xml file is placed in the root of a Windows installation 
 
 This allows for a customized and streamlined installation process without manual intervention.
 
-# Software Installation and Tweaks Script
+# 🧰 Software Installation and Tweaks Script
 
 This PowerShell script provides a graphical user interface (GUI) for performing various software installation and system tweak tasks on a Windows machine. The script includes buttons for running specific tasks such as disabling startup programs, installing Chocolatey, running activation scripts, and applying essential system tweaks.
 
@@ -26,12 +26,12 @@ This PowerShell script provides a graphical user interface (GUI) for performing 
 - **Apply Essential Tweaks**: Applies essential system tweaks for better performance.
 - **Set Folder Options**: Sets preferred folder options in Windows Explorer.
 
-## Prerequisites
+## ⏮ Prerequisites
 
 - Windows PowerShell
 - Administrative privileges to run certain tasks
 
-## Usage
+## 👤 Usage
 
 1. **Clone the Repository**: Clone this repository to your local machine.
     ```sh
@@ -45,18 +45,6 @@ This PowerShell script provides a graphical user interface (GUI) for performing 
     ```
 
 3. **Interact with the GUI**: Use the buttons in the GUI to perform the desired tasks.
-
-## Tooltips
-
-Each button in the GUI has a tooltip that explains its function when hovered over.
-
-- **Run CTT Win Utils Script**: Runs the Chris Titus Tech Windows Utilities script.
-- **Disable All Startup Programs**: Disables all startup programs to improve boot time.
-- **Install Chocolatey**: Installs Chocolatey, a package manager for Windows.
-- **Install Chocolatey Package**: Installs a specified Chocolatey package.
-- **Run Microsoft Activation Scripts**: Runs Microsoft Activation Scripts to activate Windows.
-- **Apply Essential Tweaks**: Applies essential system tweaks for better performance.
-- **Set Folder Options**: Sets preferred folder options in Windows Explorer.
 
 ## Example
 
