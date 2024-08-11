@@ -40,19 +40,49 @@ function CTTScript {
     Write-Host "CTT Win Utils script has been executed successfully" -ForegroundColor Green
 }
 
-# Function to disable all startup programs
+# Function to disable all programs from Windows Startup
 function Disable-AllStartupPrograms {
     try {
+        # Disable startup programs from Win32_StartupCommand
         Get-CimInstance -ClassName Win32_StartupCommand | ForEach-Object {
-        Set-CimInstance -InputObject $_ -Property @{Command = ""}
+            Set-CimInstance -InputObject $_ -Property @{Command = ""}
         }
+
+        # Disable startup programs from the registry (Current User)
+        $regPathCU = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
+        if (Test-Path $regPathCU) {
+            Get-ItemProperty $regPathCU | ForEach-Object {
+                Remove-ItemProperty -Path $regPathCU -Name $_.PSChildName
+            }
+        }
+
+        # Disable startup programs from the registry (Local Machine)
+        $regPathLM = "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run"
+        if (Test-Path $regPathLM) {
+            Get-ItemProperty $regPathLM | ForEach-Object {
+                Remove-ItemProperty -Path $regPathLM -Name $_.PSChildName
+            }
+        }
+
+        # Disable startup programs from the startup folder (Current User)
+        $startupFolderCU = [System.Environment]::GetFolderPath('Startup')
+        Get-ChildItem -Path $startupFolderCU | ForEach-Object {
+            Remove-Item -Path $_.FullName
+        }
+
+        # Disable startup programs from the startup folder (All Users)
+        $startupFolderAllUsers = [System.Environment]::GetFolderPath('CommonStartup')
+        Get-ChildItem -Path $startupFolderAllUsers | ForEach-Object {
+            Remove-Item -Path $_.FullName
+        }
+
         Write-Host "All startup programs have been disabled" -ForegroundColor Green
     } catch {
         Write-Host "Failed to disable startup programs" -ForegroundColor Red
     }
 }
 
-# I started using Winget to install software instead of Chocolatey, but you can use Chocolatey if you prefer
+### I started using Winget to install software instead of Chocolatey, but you can use Chocolatey if you prefer
 # Function to install Chocolatey if not already installed
 function Install-Choco {
     try{
@@ -85,6 +115,7 @@ function Install-ChocolateyPackage {
         Write-Host "$PackageName has been installed successfully" -ForegroundColor Green
     }
 }
+###
 
 # Function to run Microsoft Activation Scripts
 function MASScript {
@@ -500,6 +531,9 @@ $buttonRunAll.Add_Click({
     if ($checkboxes['AdobeAcrobat'].Checked) { winget install -e --id Adobe.Acrobat.Reader.32-bit }
     if ($checkboxes['7zip'].Checked) { winget install -e --id 7zip.7zip }
     if ($checkboxes['Office'].Checked) {
+# -------------------------------------------------------------------------------------------- #
+## Office installation script
+
 # Define the installation directory and configuration file
 $installDir = "C:\Install\Office"
 $configFile = "C:\Install\Office\configuration.xml"
@@ -516,17 +550,21 @@ Start-Process -FilePath "$installDir\ODT.exe" -ArgumentList "/extract:$installDi
 
 # Create the configuration.xml file
 $configXml = @"
-<Configuration>
-  <Add OfficeClientEdition="64" Channel="PerpetualVL2021" SourcePath="$installDir">
-    <Product ID="Standard2021Volume" PIDKEY="YOUR-MAK-KEY-HERE">
-      <Language ID="MatchOS" />
-      <ExcludeApp ID="OneDrive" />
-      <ExcludeApp ID="Teams" />
-    </Product>
-  </Add>
-  <Property Name="AUTOACTIVATE" Value="1" />
-  <Updates Enabled="TRUE" />
-  <Display Level="None" AcceptEULA="TRUE" />
+<Configuration ID="1dfe5bff-9288-461f-b1fd-3ed6dcd4c96f">
+<Add OfficeClientEdition="64" Channel="PerpetualVL2021">
+<Product ID="Standard2021Volume" PIDKEY="KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3">
+<Language ID="MatchOS"/>
+<ExcludeApp ID="OneDrive"/>
+</Product>
+</Add>
+<Property Name="SharedComputerLicensing" Value="0"/>
+<Property Name="FORCEAPPSHUTDOWN" Value="TRUE"/>
+<Property Name="DeviceBasedLicensing" Value="0"/>
+<Property Name="SCLCacheOverride" Value="0"/>
+<Property Name="AUTOACTIVATE" Value="1"/>
+<Updates Enabled="TRUE"/>
+<RemoveMSI/>
+<Display Level="None" AcceptEULA="TRUE"/>
 </Configuration>
 "@
 
@@ -543,6 +581,9 @@ Write-Host "Office Standard 2021 installation completed." -ForegroundColor Green
 
 # Clean the installation files and configuration files
 Remove-Item -Path $installDir -Recurse -Force
+
+## End of Office installation script
+# -------------------------------------------------------------------------------------------- #
     }
     if ($checkboxes['MPC'].Checked) { winget install -e --id clsid2.mpc-hc }
     if ($checkboxes['WinGetUI'].Checked) { winget install -e --id SomePythonThings.WingetUIStore }

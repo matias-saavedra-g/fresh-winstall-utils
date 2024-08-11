@@ -1,3 +1,17 @@
+# 🆕 Self installation regarding MT protocols
+
+When this autounattend.xml file is placed in the root of a Windows installation USB, it automates several configuration tasks during the Windows installation process, including:
+
+* Disabling chat auto-installation.
+
+* Running PowerShell scripts to remove packages and capabilities.
+
+* Configuring Start menu pins.
+
+* Setting the maximum password age to unlimited.
+
+This allows for a customized and streamlined installation process without manual intervention.
+
 # Software Installation and Tweaks Script
 
 This PowerShell script provides a graphical user interface (GUI) for performing various software installation and system tweak tasks on a Windows machine. The script includes buttons for running specific tasks such as disabling startup programs, installing Chocolatey, running activation scripts, and applying essential system tweaks.
@@ -6,7 +20,8 @@ This PowerShell script provides a graphical user interface (GUI) for performing 
 
 - **Run CTT Win Utils Script**: Executes the Chris Titus Tech Windows Utilities script.
 - **Disable All Startup Programs**: Disables all startup programs to improve boot time.
-- **Install using Winget**: Install packages using built-in Windows feature Winget.
+- **Install Chocolatey**: Installs Chocolatey, a package manager for Windows.
+- **Install Chocolatey Package**: Installs a specified Chocolatey package.
 - **Run Microsoft Activation Scripts**: Runs Microsoft Activation Scripts to activate Windows.
 - **Apply Essential Tweaks**: Applies essential system tweaks for better performance.
 - **Set Folder Options**: Sets preferred folder options in Windows Explorer.
