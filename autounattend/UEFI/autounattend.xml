@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=es-MX&Locale=es-CL&Keyboard=0000080a&GeoLocation=46&ProcessorArchitecture=amd64&BypassRequirementsCheck=true&BypassNetworkCheck=true&ComputerNameMode=Random&TimeZoneMode=Implicit&PartitionMode=Unattended&PartitionLayout=GPT&EspSize=300&RecoveryMode=Partition&RecoverySize=1024&WindowsEditionMode=Unattended&WindowsEdition=pro&UserAccountMode=Unattended&AccountName0=superuser&AccountPassword0=&AccountGroup0=Administrators&AccountName1=&AccountName2=&AccountName3=&AccountName4=&AutoLogonMode=Own&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=None&ShowFileExtensions=true&DisableWidgets=true&ClassicContextMenu=true&DisableFastStartup=true&EnableLongPaths=true&EnableRemoteDesktop=true&AllowPowerShellScripts=true&DisableLastAccess=true&NoAutoRebootWithLoggedOnUsers=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&WifiMode=Skip&ExpressSettings=DisableAll&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveMailCalendar=true&RemoveMaps=true&RemoveZuneVideo=true&RemoveNews=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOutlook=true&RemovePaint3D=true&RemovePeople=true&RemoveQuickAssist=true&RemoveSkype=true&RemoveSolitaire=true&RemoveStepsRecorder=true&RemoveTeams=true&RemoveGetStarted=true&RemoveWeather=true&RemoveWindowsMediaPlayer=true&RemoveZuneMusic=true&RemoveWordPad=true&FirstLogonScript0=powercfg+-setactive+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c%0D%0Apowercfg+-h+off%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+fea3413e-7e05-4911-9a71-700331f1c294+0e796bdb-100d-47d6-a2d5-f7d2daa51f51+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+fea3413e-7e05-4911-9a71-700331f1c294+0e796bdb-100d-47d6-a2d5-f7d2daa51f51+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+0012ee47-9041-4b5d-9b77-535fba8b1442+6738e2c4-e8a5-4a42-b16a-e040e769756e+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+0012ee47-9041-4b5d-9b77-535fba8b1442+6738e2c4-e8a5-4a42-b16a-e040e769756e+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+02f815b5-a5cf-4c84-bf20-649d1f75d3d8+4c793e7d-a264-42e1-87d3-7a0d2f523ccd+1%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+02f815b5-a5cf-4c84-bf20-649d1f75d3d8+4c793e7d-a264-42e1-87d3-7a0d2f523ccd+1%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+0d7dbae2-4294-402a-ba8e-26777e8488cd+309dce9b-bef4-4119-9921-a851fb12f0f4+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+0d7dbae2-4294-402a-ba8e-26777e8488cd+309dce9b-bef4-4119-9921-a851fb12f0f4+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+19cbb8fa-5279-450e-9fac-8a3d5fedd0c1+12bbebe6-58d6-4636-95bb-3217ef867c1a+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+19cbb8fa-5279-450e-9fac-8a3d5fedd0c1+12bbebe6-58d6-4636-95bb-3217ef867c1a+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+29f6c1db-86da-48c5-9fdb-f2b67b1f44da+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+29f6c1db-86da-48c5-9fdb-f2b67b1f44da+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+94ac6d29-73ce-41a6-809f-6363ba21b47e+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+94ac6d29-73ce-41a6-809f-6363ba21b47e+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+9d7815a6-7ee4-497e-8888-515a05f02364+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+9d7815a6-7ee4-497e-8888-515a05f02364+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+bd3b718a-0680-4d9d-8ab2-e1d2b4ac806d+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+238c9fa8-0aad-41ed-83f4-97be242c8f20+bd3b718a-0680-4d9d-8ab2-e1d2b4ac806d+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+2a737441-1930-4402-8d77-b2bebba308a3+48e6b7a6-50f5-4782-a5d4-53bb8f07e226+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+2a737441-1930-4402-8d77-b2bebba308a3+48e6b7a6-50f5-4782-a5d4-53bb8f07e226+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+5ca83367-6e45-459f-a27b-476b1d01c936+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+5ca83367-6e45-459f-a27b-476b1d01c936+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+7648efa3-dd9c-4e3e-b566-50f929386280+4%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+7648efa3-dd9c-4e3e-b566-50f929386280+4%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+96996bc0-ad50-47ec-923b-6f41874dd9eb+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+96996bc0-ad50-47ec-923b-6f41874dd9eb+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+a7066653-8d6c-40a8-910e-a1f54b84c7e5+2%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+4f971e89-eebd-4455-a8de-9e59040e7347+a7066653-8d6c-40a8-910e-a1f54b84c7e5+2%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+501a4d13-42af-4429-9fd1-a8218c268e20+ee12f906-d277-404b-b6da-e5fa1a576df5+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+501a4d13-42af-4429-9fd1-a8218c268e20+ee12f906-d277-404b-b6da-e5fa1a576df5+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+54533251-82be-4824-96c1-47b60b740d00+893dee8e-2bef-41e0-89c6-b55d0929964c+100%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+54533251-82be-4824-96c1-47b60b740d00+893dee8e-2bef-41e0-89c6-b55d0929964c+100%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+54533251-82be-4824-96c1-47b60b740d00+bc5038f7-23e0-4960-96da-33abaf5935ec+100%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+54533251-82be-4824-96c1-47b60b740d00+bc5038f7-23e0-4960-96da-33abaf5935ec+100%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+54533251-82be-4824-96c1-47b60b740d00+94d3a615-a899-4ac5-ae2b-e4d8f634367f+1%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+54533251-82be-4824-96c1-47b60b740d00+94d3a615-a899-4ac5-ae2b-e4d8f634367f+1%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+fbd9aa66-9553-4097-ba44-ed6e9d65eab8+1%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+fbd9aa66-9553-4097-ba44-ed6e9d65eab8+1%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+17aaa29b-8b43-4b94-aafe-35f64daaf1ee+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+17aaa29b-8b43-4b94-aafe-35f64daaf1ee+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+aded5e82-b909-4619-9949-f5d71dac0bcb+100%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+aded5e82-b909-4619-9949-f5d71dac0bcb+75%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+f1fbfde2-a960-4165-9f88-50667911ce96+75%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+7516b95f-f776-4464-8c53-06167f40cc99+f1fbfde2-a960-4165-9f88-50667911ce96+50%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+9596fb26-9850-41fd-ac3e-f7c3c00afd4b+03680956-93bc-4294-bba6-4e0f09bb717f+1%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+9596fb26-9850-41fd-ac3e-f7c3c00afd4b+03680956-93bc-4294-bba6-4e0f09bb717f+1%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+9596fb26-9850-41fd-ac3e-f7c3c00afd4b+34c7b99f-9a6d-4b3c-8dc7-b6693b78cef4+0%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+9596fb26-9850-41fd-ac3e-f7c3c00afd4b+34c7b99f-9a6d-4b3c-8dc7-b6693b78cef4+0%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+637ea02f-bbcb-4015-8e2c-a1c7b9c0b546+3%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+637ea02f-bbcb-4015-8e2c-a1c7b9c0b546+3%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+9a66d8d7-4ff7-4ef9-b5a2-5a326ca2a469+7%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+9a66d8d7-4ff7-4ef9-b5a2-5a326ca2a469+7%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+8183ba9a-e910-48da-8769-14ae6dc1170a+10%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+8183ba9a-e910-48da-8769-14ae6dc1170a+10%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+bcded951-187b-4d05-bccc-f7e51960c258+1%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+bcded951-187b-4d05-bccc-f7e51960c258+1%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+d8742dcb-3e6a-4b3c-b3fe-374623cdcf06+3%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+d8742dcb-3e6a-4b3c-b3fe-374623cdcf06+3%0D%0Apowercfg+-setacvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+f3c5027d-cd16-4930-aa6b-90db844a8f00+3%0D%0Apowercfg+-setdcvalueindex+8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c+e73a048d-bf27-4f12-9731-8b2076e8891f+f3c5027d-cd16-4930-aa6b-90db844a8f00+3&FirstLogonScriptType0=Cmd&FirstLogonScript1=%3C%23%0D%0A.SYNOPSIS%0D%0AThis+script+runs+the+first+time+a+user+logs+in+to+Windows+and+performs+various+configurations+and+installations.%0D%0A%0D%0A.DESCRIPTION%0D%0AThis+script+is+designed+to+be+run+during+the+first+logon+of+a+user+on+a+Windows+system.+It+performs+the+following+tasks%3A%0D%0A-+Self-elevates+the+prompt+if+it+is+not+already+elevated.%0D%0A-+Disables+User+Account+Control+%28UAC%29+notifications.%0D%0A-+Disables+startup+programs.%0D%0A-+Applies+essential+tweaks+to+disable+certain+features+and+settings.%0D%0A-+Installs+Winget+and+its+dependencies.%0D%0A-+Installs+various+applications+using+Winget.%0D%0A-+Preconfigures+a+setup.exe+to+download+and+install+Office+Standard+2021.%0D%0A%0D%0A.PARAMETER+None%0D%0A%0D%0A.EXAMPLE%0D%0A.%5Cfirstlogon.ps1%0D%0A%0D%0A.NOTES%0D%0A-+This+script+should+be+run+with+administrative+privileges.%0D%0A-+Some+settings+may+require+a+system+restart+to+take+effect.%0D%0A-+The+script+assumes+that+the+necessary+files+for+Winget+and+Office+Standard+2021+are+available+at+the+specified+locations.%0D%0A-+The+script+may+take+some+time+to+complete+depending+on+the+system+and+network+conditions.%0D%0A%23%3E%0D%0A%0D%0A%23+%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D+%23%0D%0A%23%23+Self-elevates+this+prompt+in+case+it+is+not+already+elevated%0D%0Aif+%28-not+%28%5BSecurity.Principal.WindowsPrincipal%5D%5BSecurity.Principal.WindowsIdentity%5D%3A%3AGetCurrent%28%29%29.IsInRole%28%5BSecurity.Principal.WindowsBuiltInRole%5D+%22Administrator%22%29%29+%7B+Start-Process+powershell.exe+%22-NoProfile+-ExecutionPolicy+Bypass+-File+%60%22%24PSCommandPath%60%22%22+-Verb+RunAs%3B+exit+%7D%0D%0A%0D%0A%23%23+Never+notifies+UAC+ever%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CPolicies%5CSystem%22+-Name+%22EnableLUA%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0A%0D%0A%23%23+Disables+all+the+startup+programs+from+Windows%0D%0AGet-ChildItem+-Path+%22HKLM%3A%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CRun%22+%7C+ForEach-Object+%7BRemove-ItemProperty+-Path+%24_.PSPath+-Name+%24_.Name%7D%0D%0A%0D%0A%23+%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D+%23%0D%0A%23%23+Apply+some+essential+tweaks%0D%0A%3C%23%0D%0AThe+script+disables+the+following+features+and+settings%3A%0D%0A-+SilentInstalledAppsEnabled%0D%0A-+AllowTelemetry%0D%0A-+EnableActivityFeed%0D%0A-+PublishUserActivities%0D%0A-+UploadUserActivities%0D%0A-+AppCaptureEnabled%0D%0A-+GameDVR_Enabled%0D%0A-+Hibernation%0D%0A-+HomeGroupListener+service%0D%0A-+HomeGroupProvider+service%0D%0A-+Location+and+Sensors%0D%0A-+Storage+Sense%0D%0A-+Teredo%0D%0A-+AutoConnectAllowedOEM%0D%0A-+MouseSpeed%0D%0A-+MouseThreshold1%0D%0A-+MouseThreshold2%0D%0A-+HiberbootEnabled%0D%0A%23%3E%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CContentDeliveryManager%22+-Name+%22SilentInstalledAppsEnabled%22+-Value+0+-ErrorAction+SilentlyContinue%23+SilentInstalledAppsEnabled+has+been+set+to+0%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CPolicies%5CMicrosoft%5CWindows%5CDataCollection%22+-Name+%22AllowTelemetry%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CPolicies%5CMicrosoft%5CWindows%5CSystem%22+-Name+%22EnableActivityFeed%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CPolicies%5CMicrosoft%5CWindows%5CSystem%22+-Name+%22PublishUserActivities%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CPolicies%5CMicrosoft%5CWindows%5CSystem%22+-Name+%22UploadUserActivities%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKCU%3A%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CGameDVR%22+-Name+%22AppCaptureEnabled%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKCU%3A%5CSystem%5CGameConfigStore%22+-Name+%22GameDVR_Enabled%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0Apowercfg+hibernate+off+-ErrorAction+SilentlyContinue%0D%0AStop-Service+-Name+HomeGroupListener+-ErrorAction+SilentlyContinue%0D%0ASet-Service+-Name+HomeGroupListener+-StartupType+Disabled+-ErrorAction+SilentlyContinue%0D%0AStop-Service+-Name+HomeGroupProvider+-ErrorAction+SilentlyContinue%0D%0ASet-Service+-Name+HomeGroupProvider+-StartupType+Disabled+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CPolicies%5CMicrosoft%5CWindows%5CLocationAndSensors%22+-Name+%22DisableLocation%22+-Value+1+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKCU%3A%5CSoftware%5CMicrosoft%5CWindows%5CCurrentVersion%5CStorageSense%5CParameters%5CStoragePolicy%22+-Name+%2201%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-NetTeredoConfiguration+-Type+Disabled+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSOFTWARE%5CMicrosoft%5CWcmSvc%5Cwifinetworkmanager%5Cconfig%22+-Name+%22AutoConnectAllowedOEM%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKCU%3A%5CControl+Panel%5CMouse%22+-Name+%22MouseSpeed%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKCU%3A%5CControl+Panel%5CMouse%22+-Name+%22MouseThreshold1%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKCU%3A%5CControl+Panel%5CMouse%22+-Name+%22MouseThreshold2%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0ASet-ItemProperty+-Path+%22HKLM%3A%5CSYSTEM%5CCurrentControlSet%5CControl%5CSession+Manager%5CPower%22+-Name+%22HiberbootEnabled%22+-Value+0+-ErrorAction+SilentlyContinue%0D%0A%0D%0A%23+%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D+%23%0D%0A%23%23+Install+Winget+according+to+Microsoft+Documentation%0D%0A%3C%23%0D%0AThis+script+downloads+and+installs+WinGet+and+its+dependencies%2C+%0D%0Aincluding+Microsoft.VCLibs.x64.14.00.Desktop.appx%2C+%0D%0AMicrosoft.UI.Xaml.2.8.x64.appx%2C+and+%0D%0AMicrosoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle.%0D%0A%23%3E%0D%0A%24progressPreference+%3D+%27silentlyContinue%27%0D%0AWrite-Information+%22Downloading+WinGet+and+its+dependencies...%22%0D%0AInvoke-WebRequest+-Uri+https%3A%2F%2Faka.ms%2Fgetwinget+-OutFile+Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle%0D%0AInvoke-WebRequest+-Uri+https%3A%2F%2Faka.ms%2FMicrosoft.VCLibs.x64.14.00.Desktop.appx+-OutFile+Microsoft.VCLibs.x64.14.00.Desktop.appx%0D%0AInvoke-WebRequest+-Uri+https%3A%2F%2Fgithub.com%2Fmicrosoft%2Fmicrosoft-ui-xaml%2Freleases%2Fdownload%2Fv2.8.6%2FMicrosoft.UI.Xaml.2.8.x64.appx+-OutFile+Microsoft.UI.Xaml.2.8.x64.appx%0D%0AAdd-AppxPackage+Microsoft.VCLibs.x64.14.00.Desktop.appx%0D%0AAdd-AppxPackage+Microsoft.UI.Xaml.2.8.x64.appx%0D%0AAdd-AppxPackage+Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle%0D%0A%0D%0A%23%23+Install+the+applications+using+Winget%0D%0A%23+Installs+WingetUI+from+Github%0D%0Awinget+install+%2D%2Did%3DSomePythonThings.WingetUIStore+-e%0D%0A%23+Installs+Adobe+Acrobat+Reader+PDF%0D%0Awinget+install+%2D%2Did%3DAdobe.AdobeAcrobatReaderDC+-e%0D%0A%23+Installs+7-zip%0D%0Awinget+install+%2D%2Did%3D7zip.7zip+-e%0D%0A%23+Installs+MPC-HC%0D%0Awinget+install+%2D%2Did%3Dmpc-hc.MPC-HC+-e%0D%0A%0D%0A%23%23+Now+preconfigures+a+setup.exe+which+downloads+from+web+Office+Standard+2021+and+installs+it%0D%0A%3C%23%0D%0AXML+Configuration+for+Office+Standard+2021%0D%0A%0D%0A%3CConfiguration+ID%3D%221dfe5bff-9288-461f-b1fd-3ed6dcd4c96f%22%3E%0D%0A%3CAdd+OfficeClientEdition%3D%2264%22+Channel%3D%22PerpetualVL2021%22%3E%0D%0A%3CProduct+ID%3D%22Standard2021Volume%22+PIDKEY%3D%22KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3%22%3E%0D%0A%3CLanguage+ID%3D%22MatchOS%22%2F%3E%0D%0A%3CExcludeApp+ID%3D%22OneDrive%22%2F%3E%0D%0A%3C%2FProduct%3E%0D%0A%3C%2FAdd%3E%0D%0A%3CProperty+Name%3D%22SharedComputerLicensing%22+Value%3D%220%22%2F%3E%0D%0A%3CProperty+Name%3D%22FORCEAPPSHUTDOWN%22+Value%3D%22TRUE%22%2F%3E%0D%0A%3CProperty+Name%3D%22DeviceBasedLicensing%22+Value%3D%220%22%2F%3E%0D%0A%3CProperty+Name%3D%22SCLCacheOverride%22+Value%3D%220%22%2F%3E%0D%0A%3CProperty+Name%3D%22AUTOACTIVATE%22+Value%3D%221%22%2F%3E%0D%0A%3CUpdates+Enabled%3D%22TRUE%22%2F%3E%0D%0A%3CRemoveMSI%2F%3E%0D%0A%3CDisplay+Level%3D%22None%22+AcceptEULA%3D%22TRUE%22%2F%3E%0D%0A%3C%2FConfiguration%3E%0D%0A%23%3E%0D%0A%24OfficeConfig+%3D+%40%22%0D%0A%3CConfiguration+ID%3D%221dfe5bff-9288-461f-b1fd-3ed6dcd4c96f%22%3E%0D%0A%3CAdd+OfficeClientEdition%3D%2264%22+Channel%3D%22PerpetualVL2021%22%3E%0D%0A%3CProduct+ID%3D%22Standard2021Volume%22+PIDKEY%3D%22KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3%22%3E%0D%0A%3CLanguage+ID%3D%22MatchOS%22%2F%3E%0D%0A%3CExcludeApp+ID%3D%22OneDrive%22%2F%3E%0D%0A%3C%2FProduct%3E%0D%0A%3C%2FAdd%3E%0D%0A%3CProperty+Name%3D%22SharedComputerLicensing%22+Value%3D%220%22%2F%3E%0D%0A%3CProperty+Name%3D%22FORCEAPPSHUTDOWN%22+Value%3D%22TRUE%22%2F%3E%0D%0A%3CProperty+Name%3D%22DeviceBasedLicensing%22+Value%3D%220%22%2F%3E%0D%0A%3CProperty+Name%3D%22SCLCacheOverride%22+Value%3D%220%22%2F%3E%0D%0A%3CProperty+Name%3D%22AUTOACTIVATE%22+Value%3D%221%22%2F%3E%0D%0A%3CUpdates+Enabled%3D%22TRUE%22%2F%3E%0D%0A%3CRemoveMSI%2F%3E%0D%0A%3CDisplay+Level%3D%22None%22+AcceptEULA%3D%22TRUE%22%2F%3E%0D%0A%3C%2FConfiguration%3E%0D%0A%22%40%0D%0A%24OfficeConfig+%7C+Out-File+-FilePath+%22C%3A%5CWindows%5CTemp%5COfficeConfig.xml%22+-Encoding+utf8%0D%0AInvoke-WebRequest+-Uri+%22https%3A%2F%2Fgo.microsoft.com%2Ffwlink%2F%3Flinkid%3D866036%22+-OutFile+%22C%3A%5CWindows%5CTemp%5COfficeSetup.exe%22%0D%0AStart-Process+-FilePath+%22C%3A%5CWindows%5CTemp%5COfficeSetup.exe%22+-ArgumentList+%22%2Fconfigure+C%3A%5CWindows%5CTemp%5COfficeConfig.xml%22+-Wait%0D%0A%0D%0A%23+%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D+%23%0D%0A%23+End+of+the+script&FirstLogonScriptType1=Ps1&WdacMode=Skip-->
+	<settings pass="offlineServicing"></settings>
+	<settings pass="windowsPE">
+		<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<SetupUILanguage>
+				<UILanguage>es-MX</UILanguage>
+			</SetupUILanguage>
+			<InputLocale>340a:0000080a</InputLocale>
+			<SystemLocale>es-CL</SystemLocale>
+			<UILanguage>es-MX</UILanguage>
+			<UserLocale>es-CL</UserLocale>
+		</component>
+		<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<ImageInstall>
+				<OSImage>
+					<InstallTo>
+						<DiskID>0</DiskID>
+						<PartitionID>3</PartitionID>
+					</InstallTo>
+				</OSImage>
+			</ImageInstall>
+			<UserData>
+				<ProductKey>
+					<Key>VK7JG-NPHTM-C97JM-9MPGT-3V66T</Key>
+				</ProductKey>
+				<AcceptEula>true</AcceptEula>
+			</UserData>
+			<RunSynchronous>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo SELECT DISK=0"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>2</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo CLEAN"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>3</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo CONVERT GPT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>4</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo CREATE PARTITION EFI SIZE=300"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>5</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo FORMAT QUICK FS=FAT32 LABEL="System""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>6</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo CREATE PARTITION MSR SIZE=16"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>7</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo CREATE PARTITION PRIMARY"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>8</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo SHRINK MINIMUM=1024"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>9</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo FORMAT QUICK FS=NTFS LABEL="Windows""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>10</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo CREATE PARTITION PRIMARY"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>11</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo FORMAT QUICK FS=NTFS LABEL="Recovery""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>12</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo SET ID="de94bba4-06d1-4d40-a16a-bfd50179d6ac""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>13</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\diskpart.txt" echo GPT ATTRIBUTES=0x8000000000000001"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>14</Order>
+					<Path>cmd.exe /c "diskpart.exe /s "X:\diskpart.txt" &gt;&gt;"X:\diskpart.log" || ( type "X:\diskpart.log" &amp; echo diskpart encountered an error. &amp; pause &amp; exit /b 1 )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>15</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\Setup\LabConfig" /v BypassTPMCheck /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>16</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\Setup\LabConfig" /v BypassSecureBootCheck /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>17</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\Setup\LabConfig" /v BypassRAMCheck /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+			</RunSynchronous>
+		</component>
+	</settings>
+	<settings pass="generalize"></settings>
+	<settings pass="specialize">
+		<component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<RunSynchronous>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v BypassNRO /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>2</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>3</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\Runonce" /v "UninstallCopilot" /t REG_SZ /d "powershell.exe -NoProfile -Command \"Get-AppxPackage -Name 'Microsoft.Windows.Ai.Copilot.Provider' | Remove-AppxPackage;\"" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>4</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Policies\Microsoft\Windows\WindowsCopilot" /v TurnOffWindowsCopilot /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>5</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>6</Order>
+					<Path>reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\Orchestrator\UScheduler_Oobe\DevHomeUpdate" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>7</Order>
+					<Path>cmd.exe /c "del "C:\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>8</Order>
+					<Path>cmd.exe /c "del "C:\Windows\System32\OneDriveSetup.exe""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>9</Order>
+					<Path>cmd.exe /c "del "C:\Windows\SysWOW64\OneDriveSetup.exe""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>10</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>11</Order>
+					<Path>reg.exe delete "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\Run" /v OneDriveSetup /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>12</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>13</Order>
+					<Path>reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\Orchestrator\UScheduler_Oobe\OutlookUpdate" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>14</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications" /v ConfigureChatAutoInstall /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>15</Order>
+					<Path>powershell.exe -NoProfile -Command "$xml = [xml]::new(); $xml.Load('C:\Windows\Panther\unattend.xml'); $sb = [scriptblock]::Create( $xml.unattend.Extensions.ExtractScript ); Invoke-Command -ScriptBlock $sb -ArgumentList $xml;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>16</Order>
+					<Path>powershell.exe -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Temp\remove-packages.ps1' -Raw | Invoke-Expression;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>17</Order>
+					<Path>powershell.exe -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Temp\remove-caps.ps1' -Raw | Invoke-Expression;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>18</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins /t REG_SZ /d "{ \"pinnedList\": [] }" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>19</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins_ProviderSet /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>20</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins_WinningProvider /t REG_SZ /d B5292708-1619-419B-9923-E5D9F3925E71 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>21</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\providers\B5292708-1619-419B-9923-E5D9F3925E71\default\Device\Start" /v ConfigureStartPins /t REG_SZ /d "{ \"pinnedList\": [] }" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>22</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\providers\B5292708-1619-419B-9923-E5D9F3925E71\default\Device\Start" /v ConfigureStartPins_LastWrite /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>23</Order>
+					<Path>net.exe accounts /maxpwage:UNLIMITED</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>24</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>25</Order>
+					<Path>reg.exe add "HKU\DefaultUser\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>26</Order>
+					<Path>reg.exe add "HKU\DefaultUser\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Hidden" /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>27</Order>
+					<Path>reg.exe add "HKU\DefaultUser\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSuperHidden" /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>28</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>29</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>30</Order>
+					<Path>netsh.exe advfirewall firewall set rule group="@FirewallAPI.dll,-28752" new enable=Yes</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>31</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>32</Order>
+					<Path>powershell.exe -NoProfile -Command "Set-ExecutionPolicy -Scope 'LocalMachine' -ExecutionPolicy 'RemoteSigned' -Force;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>33</Order>
+					<Path>fsutil.exe behavior set disableLastAccess 1</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>34</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v AUOptions /t REG_DWORD /d 4 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>35</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v NoAutoRebootWithLoggedOnUsers /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>36</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>37</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>38</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>39</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "ContentDeliveryAllowed" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>40</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "FeatureManagementEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>41</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "OEMPreInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>42</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>43</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEverEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>44</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>45</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SoftLandingEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>46</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContentEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>47</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-310093Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>48</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338387Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>49</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338388Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>50</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>51</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338393Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>52</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353698Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>53</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SystemPaneSuggestionsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>54</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>55</Order>
+					<Path>reg.exe add "HKLM\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>56</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\BitLocker" /v "PreventDeviceEncryption" /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>57</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>58</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\Runonce" /v "ClassicContextMenu" /t REG_SZ /d "reg.exe add \"HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32\" /ve /f" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>59</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+			</RunSynchronous>
+		</component>
+	</settings>
+	<settings pass="auditSystem"></settings>
+	<settings pass="auditUser"></settings>
+	<settings pass="oobeSystem">
+		<component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<InputLocale>340a:0000080a</InputLocale>
+			<SystemLocale>es-CL</SystemLocale>
+			<UILanguage>es-MX</UILanguage>
+			<UserLocale>es-CL</UserLocale>
+		</component>
+		<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<UserAccounts>
+				<LocalAccounts>
+					<LocalAccount wcm:action="add">
+						<Name>superuser</Name>
+						<Group>Administrators</Group>
+						<Password>
+							<Value></Value>
+							<PlainText>true</PlainText>
+						</Password>
+					</LocalAccount>
+				</LocalAccounts>
+			</UserAccounts>
+			<AutoLogon>
+				<Username>superuser</Username>
+				<Enabled>true</Enabled>
+				<LogonCount>1</LogonCount>
+				<Password>
+					<Value></Value>
+					<PlainText>true</PlainText>
+				</Password>
+			</AutoLogon>
+			<OOBE>
+				<ProtectYourPC>3</ProtectYourPC>
+				<HideEULAPage>true</HideEULAPage>
+				<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+			</OOBE>
+			<FirstLogonCommands>
+				<SynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<CommandLine>reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoLogonCount /t REG_DWORD /d 0 /f</CommandLine>
+				</SynchronousCommand>
+				<SynchronousCommand wcm:action="add">
+					<Order>2</Order>
+					<CommandLine>cmd.exe /c "C:\Windows\Setup\Scripts\unattend-01.cmd &gt;&gt;"C:\Windows\Setup\Scripts\unattend-01.log" 2&gt;&amp;1"</CommandLine>
+				</SynchronousCommand>
+				<SynchronousCommand wcm:action="add">
+					<Order>3</Order>
+					<CommandLine>cmd.exe /c "powershell.exe -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\unattend-02.ps1' -Raw | Invoke-Expression;" &gt;&gt;"C:\Windows\Setup\Scripts\unattend-02.log" 2&gt;&amp;1"</CommandLine>
+				</SynchronousCommand>
+			</FirstLogonCommands>
+		</component>
+	</settings>
+	<Extensions xmlns="https://schneegans.de/windows/unattend-generator/">
+		<ExtractScript>
+param(
+    [xml] $Document
+);
+
+$scriptsDir = 'C:\Windows\Setup\Scripts\';
+foreach( $file in $Document.unattend.Extensions.File ) {
+    $path = [System.Environment]::ExpandEnvironmentVariables(
+        $file.GetAttribute( 'path' )
+    );
+    if( $path.StartsWith( $scriptsDir ) ) {
+        mkdir -Path $scriptsDir -ErrorAction 'SilentlyContinue';
+    }
+    $encoding = switch( [System.IO.Path]::GetExtension( $path ) ) {
+        { $_ -in '.ps1', '.xml' } { [System.Text.Encoding]::UTF8; }
+        { $_ -in '.reg', '.vbs', '.js' } { [System.Text.UnicodeEncoding]::new( $false, $true ); }
+        default { [System.Text.Encoding]::Default; }
+    };
+    [System.IO.File]::WriteAllBytes( $path, ( $encoding.GetPreamble() + $encoding.GetBytes( $file.InnerText.Trim() ) ) );
+}
+		</ExtractScript>
+		<File path="C:\Windows\Temp\remove-packages.ps1">
+$selectors = @(
+	'Microsoft.Microsoft3DViewer';
+	'Microsoft.BingSearch';
+	'Clipchamp.Clipchamp';
+	'Microsoft.549981C3F5F10';
+	'Microsoft.Windows.DevHome';
+	'MicrosoftCorporationII.MicrosoftFamily';
+	'Microsoft.WindowsFeedbackHub';
+	'Microsoft.GetHelp';
+	'Microsoft.Getstarted';
+	'microsoft.windowscommunicationsapps';
+	'Microsoft.WindowsMaps';
+	'Microsoft.BingNews';
+	'Microsoft.MicrosoftOfficeHub';
+	'Microsoft.Office.OneNote';
+	'Microsoft.OutlookForWindows';
+	'Microsoft.MSPaint';
+	'Microsoft.People';
+	'MicrosoftCorporationII.QuickAssist';
+	'Microsoft.SkypeApp';
+	'Microsoft.MicrosoftSolitaireCollection';
+	'MSTeams';
+	'Microsoft.BingWeather';
+	'Microsoft.ZuneMusic';
+	'Microsoft.ZuneVideo';
+);
+$getCommand = { Get-AppxProvisionedPackage -Online; };
+$filterCommand = { $_.DisplayName -eq $selector; };
+$removeCommand = {
+  [CmdletBinding()]
+  param(
+    [Parameter( Mandatory, ValueFromPipeline )]
+    $InputObject
+  );
+  process {
+    $InputObject | Remove-AppxProvisionedPackage -AllUsers -Online -ErrorAction 'Continue';
+  }
+};
+$type = 'Package';
+$logfile = 'C:\Windows\Temp\remove-packages.log';
+&amp; {
+	$installed = &amp; $getCommand;
+	foreach( $selector in $selectors ) {
+		$result = [ordered] @{
+			Selector = $selector;
+		};
+		$found = $installed | Where-Object -FilterScript $filterCommand;
+		if( $found ) {
+			$result.Output = $found | &amp; $removeCommand;
+			if( $? ) {
+				$result.Message = "$type removed.";
+			} else {
+				$result.Message = "$type not removed.";
+				$result.Error = $Error[0];
+			}
+		} else {
+			$result.Message = "$type not installed.";
+		}
+		$result | ConvertTo-Json -Depth 3 -Compress;
+	}
+} *&gt;&amp;1 &gt;&gt; $logfile;
+		</File>
+		<File path="C:\Windows\Temp\remove-caps.ps1">
+$selectors = @(
+	'App.Support.QuickAssist';
+	'App.StepsRecorder';
+	'Media.WindowsMediaPlayer';
+	'Microsoft.Windows.WordPad';
+);
+$getCommand = { Get-WindowsCapability -Online; };
+$filterCommand = { ($_.Name -split '~')[0] -eq $selector; };
+$removeCommand = {
+  [CmdletBinding()]
+  param(
+    [Parameter( Mandatory, ValueFromPipeline )]
+    $InputObject
+  );
+  process {
+    $InputObject | Remove-WindowsCapability -Online -ErrorAction 'Continue';
+  }
+};
+$type = 'Capability';
+$logfile = 'C:\Windows\Temp\remove-caps.log';
+&amp; {
+	$installed = &amp; $getCommand;
+	foreach( $selector in $selectors ) {
+		$result = [ordered] @{
+			Selector = $selector;
+		};
+		$found = $installed | Where-Object -FilterScript $filterCommand;
+		if( $found ) {
+			$result.Output = $found | &amp; $removeCommand;
+			if( $? ) {
+				$result.Message = "$type removed.";
+			} else {
+				$result.Message = "$type not removed.";
+				$result.Error = $Error[0];
+			}
+		} else {
+			$result.Message = "$type not installed.";
+		}
+		$result | ConvertTo-Json -Depth 3 -Compress;
+	}
+} *&gt;&amp;1 &gt;&gt; $logfile;
+		</File>
+		<File path="C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml"><![CDATA[
+<LayoutModificationTemplate Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">
+	<LayoutOptions StartTileGroupCellWidth="6" />
+	<DefaultLayoutOverride>
+		<StartLayoutCollection>
+			<StartLayout GroupCellWidth="6" xmlns="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" />
+		</StartLayoutCollection>
+	</DefaultLayoutOverride>
+</LayoutModificationTemplate>
+		]]></File>
+		<File path="C:\Windows\Setup\Scripts\unattend-01.cmd">
+powercfg -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+powercfg -h off
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c fea3413e-7e05-4911-9a71-700331f1c294 0e796bdb-100d-47d6-a2d5-f7d2daa51f51 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c fea3413e-7e05-4911-9a71-700331f1c294 0e796bdb-100d-47d6-a2d5-f7d2daa51f51 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 0012ee47-9041-4b5d-9b77-535fba8b1442 6738e2c4-e8a5-4a42-b16a-e040e769756e 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 0012ee47-9041-4b5d-9b77-535fba8b1442 6738e2c4-e8a5-4a42-b16a-e040e769756e 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 02f815b5-a5cf-4c84-bf20-649d1f75d3d8 4c793e7d-a264-42e1-87d3-7a0d2f523ccd 1
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 02f815b5-a5cf-4c84-bf20-649d1f75d3d8 4c793e7d-a264-42e1-87d3-7a0d2f523ccd 1
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 0d7dbae2-4294-402a-ba8e-26777e8488cd 309dce9b-bef4-4119-9921-a851fb12f0f4 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 0d7dbae2-4294-402a-ba8e-26777e8488cd 309dce9b-bef4-4119-9921-a851fb12f0f4 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 19cbb8fa-5279-450e-9fac-8a3d5fedd0c1 12bbebe6-58d6-4636-95bb-3217ef867c1a 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 19cbb8fa-5279-450e-9fac-8a3d5fedd0c1 12bbebe6-58d6-4636-95bb-3217ef867c1a 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 29f6c1db-86da-48c5-9fdb-f2b67b1f44da 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 29f6c1db-86da-48c5-9fdb-f2b67b1f44da 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 94ac6d29-73ce-41a6-809f-6363ba21b47e 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 94ac6d29-73ce-41a6-809f-6363ba21b47e 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 9d7815a6-7ee4-497e-8888-515a05f02364 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 9d7815a6-7ee4-497e-8888-515a05f02364 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 bd3b718a-0680-4d9d-8ab2-e1d2b4ac806d 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 238c9fa8-0aad-41ed-83f4-97be242c8f20 bd3b718a-0680-4d9d-8ab2-e1d2b4ac806d 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 2a737441-1930-4402-8d77-b2bebba308a3 48e6b7a6-50f5-4782-a5d4-53bb8f07e226 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 2a737441-1930-4402-8d77-b2bebba308a3 48e6b7a6-50f5-4782-a5d4-53bb8f07e226 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 7648efa3-dd9c-4e3e-b566-50f929386280 4
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 7648efa3-dd9c-4e3e-b566-50f929386280 4
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 96996bc0-ad50-47ec-923b-6f41874dd9eb 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 96996bc0-ad50-47ec-923b-6f41874dd9eb 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 a7066653-8d6c-40a8-910e-a1f54b84c7e5 2
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 4f971e89-eebd-4455-a8de-9e59040e7347 a7066653-8d6c-40a8-910e-a1f54b84c7e5 2
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 501a4d13-42af-4429-9fd1-a8218c268e20 ee12f906-d277-404b-b6da-e5fa1a576df5 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 501a4d13-42af-4429-9fd1-a8218c268e20 ee12f906-d277-404b-b6da-e5fa1a576df5 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 893dee8e-2bef-41e0-89c6-b55d0929964c 100
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 893dee8e-2bef-41e0-89c6-b55d0929964c 100
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 bc5038f7-23e0-4960-96da-33abaf5935ec 100
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 bc5038f7-23e0-4960-96da-33abaf5935ec 100
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 94d3a615-a899-4ac5-ae2b-e4d8f634367f 1
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 54533251-82be-4824-96c1-47b60b740d00 94d3a615-a899-4ac5-ae2b-e4d8f634367f 1
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 fbd9aa66-9553-4097-ba44-ed6e9d65eab8 1
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 fbd9aa66-9553-4097-ba44-ed6e9d65eab8 1
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 17aaa29b-8b43-4b94-aafe-35f64daaf1ee 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 17aaa29b-8b43-4b94-aafe-35f64daaf1ee 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 aded5e82-b909-4619-9949-f5d71dac0bcb 100
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 aded5e82-b909-4619-9949-f5d71dac0bcb 75
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 f1fbfde2-a960-4165-9f88-50667911ce96 75
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 7516b95f-f776-4464-8c53-06167f40cc99 f1fbfde2-a960-4165-9f88-50667911ce96 50
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 9596fb26-9850-41fd-ac3e-f7c3c00afd4b 03680956-93bc-4294-bba6-4e0f09bb717f 1
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 9596fb26-9850-41fd-ac3e-f7c3c00afd4b 03680956-93bc-4294-bba6-4e0f09bb717f 1
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 9596fb26-9850-41fd-ac3e-f7c3c00afd4b 34c7b99f-9a6d-4b3c-8dc7-b6693b78cef4 0
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 9596fb26-9850-41fd-ac3e-f7c3c00afd4b 34c7b99f-9a6d-4b3c-8dc7-b6693b78cef4 0
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f 637ea02f-bbcb-4015-8e2c-a1c7b9c0b546 3
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f 637ea02f-bbcb-4015-8e2c-a1c7b9c0b546 3
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f 9a66d8d7-4ff7-4ef9-b5a2-5a326ca2a469 7
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f 9a66d8d7-4ff7-4ef9-b5a2-5a326ca2a469 7
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f 8183ba9a-e910-48da-8769-14ae6dc1170a 10
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f 8183ba9a-e910-48da-8769-14ae6dc1170a 10
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f bcded951-187b-4d05-bccc-f7e51960c258 1
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f bcded951-187b-4d05-bccc-f7e51960c258 1
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f d8742dcb-3e6a-4b3c-b3fe-374623cdcf06 3
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f d8742dcb-3e6a-4b3c-b3fe-374623cdcf06 3
+powercfg -setacvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f f3c5027d-cd16-4930-aa6b-90db844a8f00 3
+powercfg -setdcvalueindex 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c e73a048d-bf27-4f12-9731-8b2076e8891f f3c5027d-cd16-4930-aa6b-90db844a8f00 3
+		</File>
+		<File path="C:\Windows\Setup\Scripts\unattend-02.ps1">
+&lt;#
+.SYNOPSIS
+This script runs the first time a user logs in to Windows and performs various configurations and installations.
+
+.DESCRIPTION
+This script is designed to be run during the first logon of a user on a Windows system. It performs the following tasks:
+- Self-elevates the prompt if it is not already elevated.
+- Disables User Account Control (UAC) notifications.
+- Disables startup programs.
+- Applies essential tweaks to disable certain features and settings.
+- Installs Winget and its dependencies.
+- Installs various applications using Winget.
+- Preconfigures a setup.exe to download and install Office Standard 2021.
+
+.PARAMETER None
+
+.EXAMPLE
+.\firstlogon.ps1
+
+.NOTES
+- This script should be run with administrative privileges.
+- Some settings may require a system restart to take effect.
+- The script assumes that the necessary files for Winget and Office Standard 2021 are available at the specified locations.
+- The script may take some time to complete depending on the system and network conditions.
+#&gt;
+
+# -------------------------------------------------------------------------------------------- #
+## Self-elevates this prompt in case it is not already elevated
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
+
+## Never notifies UAC ever
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "EnableLUA" -Value 0 -ErrorAction SilentlyContinue
+
+## Disables all the startup programs from Windows
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" | ForEach-Object {Remove-ItemProperty -Path $_.PSPath -Name $_.Name}
+
+# -------------------------------------------------------------------------------------------- #
+## Apply some essential tweaks
+&lt;#
+The script disables the following features and settings:
+- SilentInstalledAppsEnabled
+- AllowTelemetry
+- EnableActivityFeed
+- PublishUserActivities
+- UploadUserActivities
+- AppCaptureEnabled
+- GameDVR_Enabled
+- Hibernation
+- HomeGroupListener service
+- HomeGroupProvider service
+- Location and Sensors
+- Storage Sense
+- Teredo
+- AutoConnectAllowedOEM
+- MouseSpeed
+- MouseThreshold1
+- MouseThreshold2
+- HiberbootEnabled
+#&gt;
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SilentInstalledAppsEnabled" -Value 0 -ErrorAction SilentlyContinue# SilentInstalledAppsEnabled has been set to 0
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" -Name "EnableActivityFeed" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" -Name "PublishUserActivities" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" -Name "UploadUserActivities" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" -Name "AppCaptureEnabled" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name "GameDVR_Enabled" -Value 0 -ErrorAction SilentlyContinue
+powercfg hibernate off -ErrorAction SilentlyContinue
+Stop-Service -Name HomeGroupListener -ErrorAction SilentlyContinue
+Set-Service -Name HomeGroupListener -StartupType Disabled -ErrorAction SilentlyContinue
+Stop-Service -Name HomeGroupProvider -ErrorAction SilentlyContinue
+Set-Service -Name HomeGroupProvider -StartupType Disabled -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" -Name "DisableLocation" -Value 1 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy" -Name "01" -Value 0 -ErrorAction SilentlyContinue
+Set-NetTeredoConfiguration -Type Disabled -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\config" -Name "AutoConnectAllowedOEM" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKCU:\Control Panel\Mouse" -Name "MouseSpeed" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKCU:\Control Panel\Mouse" -Name "MouseThreshold1" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKCU:\Control Panel\Mouse" -Name "MouseThreshold2" -Value 0 -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" -Name "HiberbootEnabled" -Value 0 -ErrorAction SilentlyContinue
+
+# -------------------------------------------------------------------------------------------- #
+## Install Winget according to Microsoft Documentation
+&lt;#
+This script downloads and installs WinGet and its dependencies, 
+including Microsoft.VCLibs.x64.14.00.Desktop.appx, 
+Microsoft.UI.Xaml.2.8.x64.appx, and 
+Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle.
+#&gt;
+$progressPreference = 'silentlyContinue'
+Write-Information "Downloading WinGet and its dependencies..."
+Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+Invoke-WebRequest -Uri https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile Microsoft.VCLibs.x64.14.00.Desktop.appx
+Invoke-WebRequest -Uri https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx -OutFile Microsoft.UI.Xaml.2.8.x64.appx
+Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
+Add-AppxPackage Microsoft.UI.Xaml.2.8.x64.appx
+Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+
+## Install the applications using Winget
+# Installs WingetUI from Github
+winget install --id=SomePythonThings.WingetUIStore -e
+# Installs Adobe Acrobat Reader PDF
+winget install --id=Adobe.AdobeAcrobatReaderDC -e
+# Installs 7-zip
+winget install --id=7zip.7zip -e
+# Installs MPC-HC
+winget install --id=mpc-hc.MPC-HC -e
+
+## Now preconfigures a setup.exe which downloads from web Office Standard 2021 and installs it
+&lt;#
+XML Configuration for Office Standard 2021
+
+&lt;Configuration ID="1dfe5bff-9288-461f-b1fd-3ed6dcd4c96f"&gt;
+&lt;Add OfficeClientEdition="64" Channel="PerpetualVL2021"&gt;
+&lt;Product ID="Standard2021Volume" PIDKEY="KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3"&gt;
+&lt;Language ID="MatchOS"/&gt;
+&lt;ExcludeApp ID="OneDrive"/&gt;
+&lt;/Product&gt;
+&lt;/Add&gt;
+&lt;Property Name="SharedComputerLicensing" Value="0"/&gt;
+&lt;Property Name="FORCEAPPSHUTDOWN" Value="TRUE"/&gt;
+&lt;Property Name="DeviceBasedLicensing" Value="0"/&gt;
+&lt;Property Name="SCLCacheOverride" Value="0"/&gt;
+&lt;Property Name="AUTOACTIVATE" Value="1"/&gt;
+&lt;Updates Enabled="TRUE"/&gt;
+&lt;RemoveMSI/&gt;
+&lt;Display Level="None" AcceptEULA="TRUE"/&gt;
+&lt;/Configuration&gt;
+#&gt;
+$OfficeConfig = @"
+&lt;Configuration ID="1dfe5bff-9288-461f-b1fd-3ed6dcd4c96f"&gt;
+&lt;Add OfficeClientEdition="64" Channel="PerpetualVL2021"&gt;
+&lt;Product ID="Standard2021Volume" PIDKEY="KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3"&gt;
+&lt;Language ID="MatchOS"/&gt;
+&lt;ExcludeApp ID="OneDrive"/&gt;
+&lt;/Product&gt;
+&lt;/Add&gt;
+&lt;Property Name="SharedComputerLicensing" Value="0"/&gt;
+&lt;Property Name="FORCEAPPSHUTDOWN" Value="TRUE"/&gt;
+&lt;Property Name="DeviceBasedLicensing" Value="0"/&gt;
+&lt;Property Name="SCLCacheOverride" Value="0"/&gt;
+&lt;Property Name="AUTOACTIVATE" Value="1"/&gt;
+&lt;Updates Enabled="TRUE"/&gt;
+&lt;RemoveMSI/&gt;
+&lt;Display Level="None" AcceptEULA="TRUE"/&gt;
+&lt;/Configuration&gt;
+"@
+$OfficeConfig | Out-File -FilePath "C:\Windows\Temp\OfficeConfig.xml" -Encoding utf8
+Invoke-WebRequest -Uri "https://go.microsoft.com/fwlink/?linkid=866036" -OutFile "C:\Windows\Temp\OfficeSetup.exe"
+Start-Process -FilePath "C:\Windows\Temp\OfficeSetup.exe" -ArgumentList "/configure C:\Windows\Temp\OfficeConfig.xml" -Wait
+
+# -------------------------------------------------------------------------------------------- #
+# End of the script
+		</File>
+	</Extensions>
+</unattend>
